@@ -1,7 +1,10 @@
 import * as S from "./style";
 import logo from "../assets/svgs/premier_league.svg";
+import useTitle from '../hook/title';
 
 const Introduce = () => {
+    const titleUpdater = useTitle('불러오는 중...');
+    setTimeout(() => titleUpdater('EPL Table - 잉글랜드 프리미어리그 조회 서비스'))
 
   return (
     <S.Container>
