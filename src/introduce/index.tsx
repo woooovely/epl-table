@@ -1,10 +1,13 @@
 import * as S from "./style";
 import logo from "../assets/svgs/premier_league.svg";
 import useTitle from '../hook/title';
+import { useNavigate } from 'react-router-dom';
 
 const Introduce = () => {
     const titleUpdater = useTitle('불러오는 중...');
     setTimeout(() => titleUpdater('EPL Table - 잉글랜드 프리미어리그 조회 서비스'))
+
+    const navigate = useNavigate();
 
   return (
     <S.Container>
@@ -23,7 +26,7 @@ const Introduce = () => {
             <img src={logo} alt="프리미어리그 로고" />
           </S.Right>
         </S.Section>
-        <S.Button>이동하기</S.Button>
+        <S.Button onClick={() => navigate('/rank')}>이동하기</S.Button>
       </S.IntroduceContainer>
     </S.Container>
   );
