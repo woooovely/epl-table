@@ -6,6 +6,8 @@ export const HeaderContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  background-color: white;
 `
 
 export const LogoText = styled.p`
