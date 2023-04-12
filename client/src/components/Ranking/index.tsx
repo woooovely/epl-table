@@ -26,6 +26,29 @@ const RankingLists = () => {
   const [teams, setTeams] = useState<Team[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
+  const teamNameMap: { [key: string]: string} = {
+    "Arsenal FC": "아스날",
+    "Manchester City FC": "맨시티",
+    "Newcastle United FC": "뉴캐슬",
+    "Manchester United FC": "맨유",
+    "Tottenham Hotspur FC": "토트넘",
+    "Aston Villa FC": "아스톤 빌라",
+    "Brighton & Hove Albion FC": "브라이튼",
+    "Liverpool FC": "리버풀",
+    "Brentford FC": "브렌트포드",
+    "Fulham FC": "풀럼",
+    "Chelsea FC": "첼시",
+    "Crystal Palace FC": "크리스탈 팰리스",
+    "Wolverhampton Wanderers FC": "울버햄튼",
+    "West Ham United FC": "웨스트햄",
+    "AFC Bournemouth": "본머스",
+    "Leeds United FC": "리즈",
+    "Everton FC": "에버튼",
+    "Nottingham Forest FC": "노팅엄",
+    "Leicester City FC": "레스터",
+    "Southampton FC": "사우스햄튼"
+  }  
+
   useEffect(() => {
     const fetchData = async () => {
       const url = "/premierleague";
@@ -36,13 +59,20 @@ const RankingLists = () => {
         const premierLeague = standings.find((s: any) => s.type === "TOTAL");
         const premierLeagueTable = premierLeague?.table;
         if (premierLeagueTable) {
-          setTeams(premierLeagueTable);
+          const convertedTable = premierLeagueTable.map((team: Team) => ({
+            ...team,
+            team: {
+              ...team.team,
+              name: teamNameMap[team.team.name] || team.team.name
+            }
+          }))
+          setTeams(convertedTable);
         }
       }
       setIsLoading(false);
     };
     fetchData();
-  }, []);
+  }, [teams]);
 
   if (isLoading) {
     return <h2>로딩중...</h2>;
@@ -70,7 +100,7 @@ const RankingLists = () => {
               <S.ListTd>{item.position}</S.ListTd>
               <S.ListTd>
                 <S.TeamLogo src={item.team.crest} alt="팀 이미지" />
-                <S.TeamName>{item.team.shortName}</S.TeamName>
+                <S.TeamName>{item.team.name}</S.TeamName>
               </S.ListTd>
               <S.ListTd>{item.playedGames}</S.ListTd>
               <S.ListTd>{item.won}</S.ListTd>
