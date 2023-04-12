@@ -6,9 +6,15 @@ const Header = () => {
           <S.HeaderContainer>
             <S.LogoText>EPL Table</S.LogoText>
             <S.CategoryContainer>
-                <S.Categories>About</S.Categories>
-                <S.Categories>Ranking</S.Categories>
-                <S.Categories>Top Scorer</S.Categories>
+                <S.Categories>
+                  <S.LinkStyle to="/">About</S.LinkStyle>
+                </S.Categories>
+                <S.Categories>
+                  <S.LinkStyle to="/rank">Ranking</S.LinkStyle>
+                </S.Categories>
+                <S.Categories>
+                  <S.LinkStyle to="/top-scorer">Top Scorer</S.LinkStyle>
+                </S.Categories>
             </S.CategoryContainer>
           </S.HeaderContainer>
         </>

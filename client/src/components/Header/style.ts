@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.nav`
   width: 100%;
@@ -24,4 +25,9 @@ export const CategoryContainer = styled.ul`
 
 export const Categories = styled.li`
   font-size: 15px;
+`
+
+export const LinkStyle = styled(Link)`
+  color: black;
+  text-decoration: none;
 `
