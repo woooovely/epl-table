@@ -20,6 +20,6 @@ export const Stick = styled.div`
 `
 
 export const TableContainer = styled.div`
-  width: 400px;
+  width: 390px;
   margin: 0 auto;
 `
