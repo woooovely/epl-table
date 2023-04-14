@@ -16,3 +16,8 @@ export const Stick = styled.div`
   background-color: #C4C4C4;
   margin: 0 auto;
 `
+
+export const TableContainer = styled.div`
+  width: 500px;
+  margin: 0 auto;
+`
