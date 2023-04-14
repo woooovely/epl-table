@@ -23,7 +23,7 @@ interface Team {
   points: number;
 }
 
-const teamNameMap: { [key: string]: string } = {
+export const teamNameMap: { [key: string]: string } = {
   "Arsenal FC": "아스날",
   "Manchester City FC": "맨시티",
   "Newcastle United FC": "뉴캐슬",
