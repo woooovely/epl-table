@@ -1,42 +1,107 @@
 import styled from "styled-components";
 
 export const Table = styled.table`
-  margin-top: 50px;
+  border-collapse: collapse;
   width: 500px;
-  border: 1px solid #D6D6D6;
-  border-radius: 10px;
+  margin-top: 50px;
 `;
 
-export const Head = styled.thead``;
-
-export const TableTr = styled.tr``;
-
-export const TableTh = styled.th`
-  margin-right: 50px;
+export const Head = styled.thead`
+  background-color: #f5f5f5;
 `;
 
 export const Body = styled.tbody``;
 
-export const ListTr = styled.tr`
+export const TableTr = styled.tr`
+  background-color: white;
+  font-weight: normal;
 `;
 
-export const ListTd = styled.td`
+export const TableTh = styled.th`
+  padding: 10px;
   text-align: center;
-  :nth-child(2) {
-    display: flex;
-    align-items: center;
-    margin-left: 45px;
-    margin-top: 15px;
-    padding-left: 10px;
+`;
+
+export const ListTr = styled.tr`
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 14px;
+  &:hover {
+    background-color: #f2f2f2;
   }
 `;
 
-export const TeamLogo = styled.img`
-  width: 25px;
-  height: 25px;
+export const ListTd = styled.td`
+  padding: 10px;
+  text-align: center;
+  &:nth-child(1) {
+    font-weight: bold;
+  }
+  &:nth-child(2) {
+    display: flex;
+    align-items: center;
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+    b {
+      width: 200px;
+      text-align: left;
+      display: inline-block;
+    }
+  }
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    font-weight: bold;
+    color: #002147;
+  }
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(8) {
+    font-weight: bold;
+    color: #5b5b5b;
+  }
 `;
 
-export const TeamName = styled.b`
-  margin-left: 10px;
-`
+export const Rank = styled.span`
+  display: inline-block;
+  margin-right: 5px;
+`;
 
+export const Points = styled.span`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+export const WDL = styled.span`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+export const GD = styled.span`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+export const GF = styled.span`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+export const GA = styled.span`
+  display: inline-block;
+  margin-right: 5px;
+`;
+
+export const TeamLogo = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+`;
+
+export const TeamName = styled.div`
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+`;

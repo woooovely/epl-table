@@ -89,7 +89,9 @@ const RankingLists = () => {
       <S.Table>
         <S.Head>
           <S.TableTr>
-            <S.TableTh>순위</S.TableTh>
+            <S.TableTh>
+              <div>순위</div>
+            </S.TableTh>
             <S.TableTh>클럽</S.TableTh>
             <S.TableTh>경기수</S.TableTh>
             <S.TableTh>승</S.TableTh>
@@ -101,7 +103,9 @@ const RankingLists = () => {
         <S.Body>
           {teams.map((item: Team) => (
             <S.ListTr key={item.position}>
-              <S.ListTd>{item.position}</S.ListTd>
+              <S.ListTd>
+                <S.Rank>{item.position}</S.Rank>
+              </S.ListTd>
               <S.ListTd>
                 <S.TeamLogo src={item.team.crest} alt="팀 이미지" />
                 <S.TeamName>{item.team.name}</S.TeamName>
