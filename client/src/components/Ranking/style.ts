@@ -15,11 +15,15 @@ export const Body = styled.tbody``;
 export const TableTr = styled.tr`
   background-color: white;
   font-weight: normal;
+  font-family: 'Pretendard';
 `;
 
 export const TableTh = styled.th`
   padding: 10px;
   text-align: center;
+  font-weight: normal;
+  font-family: 'Pretendard';
+  color: #989898;
 `;
 
 export const ListTr = styled.tr`
@@ -34,7 +38,7 @@ export const ListTd = styled.td`
   padding: 10px;
   text-align: center;
   &:nth-child(1) {
-    font-weight: bold;
+    font-weight: normal;
   }
   &:nth-child(2) {
     display: flex;
@@ -53,13 +57,13 @@ export const ListTd = styled.td`
   &:nth-child(3),
   &:nth-child(4),
   &:nth-child(5) {
-    font-weight: bold;
+    font-weight: normal;
     color: #002147;
   }
   &:nth-child(6),
   &:nth-child(7),
   &:nth-child(8) {
-    font-weight: bold;
+    font-weight: normal;
     color: #5b5b5b;
   }
 `;
