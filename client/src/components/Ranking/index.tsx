@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import useTitle from '../../hook/title';
+import useTitle from "../../hook/title";
 import * as S from "./style";
 
 interface TeamData {
@@ -47,8 +47,8 @@ export const teamNameMap: { [key: string]: string } = {
 };
 
 const RankingLists = () => {
-  const titleUpdater = useTitle('불러오는 중...')
-  setTimeout(() => titleUpdater('팀 순위 - EPL Table'))
+  const titleUpdater = useTitle("불러오는 중...");
+  setTimeout(() => titleUpdater("팀 순위 - EPL Table"));
 
   const [teams, setTeams] = useState<Team[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -89,9 +89,7 @@ const RankingLists = () => {
       <S.Table>
         <S.Head>
           <S.TableTr>
-            <S.TableTh>
-              <div>순위</div>
-            </S.TableTh>
+            <S.TableTh>순위</S.TableTh>
             <S.TableTh>클럽</S.TableTh>
             <S.TableTh>경기수</S.TableTh>
             <S.TableTh>승</S.TableTh>
