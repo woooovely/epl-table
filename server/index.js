@@ -79,6 +79,29 @@ app.get("/premierleague/scorers", (req, res) =>
     }
   })
 );
+
+app.get("/news", (req, res) =>
+  __awaiter(void 0, void 0, void 0, function* () {
+    try {
+      const response = yield axios_1.default.get(
+        "https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230101&endDate=20230421",
+        {
+          headers: {
+            "X-Naver-Client-Id": "cAF0lQLJicO9hFcO8ZaG",
+            "X-Naver-Client-Secret": "nQ6CSn959Z"
+          },
+        }
+      );
+      res.send(response.data);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Interval Server Error");
+    }
+  })
+);
+
+
+
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
