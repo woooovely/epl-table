@@ -50,8 +50,8 @@ app.get('/news', async (req: Request, res: Response) => {
     const response = await axios.get('https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230101&endDate=20230421', 
     {
       headers: {
-        'X-Naver-Client-Id': "cAF0lQLJicO9hFcO8ZaG",
-        'X-Naver-Client-Secret': "nQ6CSn959Z"
+        'X-Naver-Client-Id': process.env.CLIENT_ID,
+        'X-Naver-Client-Secret': process.env.CLIENT_SECRET
       }
     }
     )

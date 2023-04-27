@@ -24,7 +24,7 @@ app.get("/premierleague/scorers", (req, res) => __awaiter(void 0, void 0, void 0
     try {
         const response = yield axios_1.default.get("https://api.football-data.org/v4/competitions/PL/scorers", {
             headers: {
-                "X-Auth-Token": process.env.API_TOKEN,
+                "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
             },
         });
         res.send(response.data);
@@ -38,7 +38,7 @@ app.get("/premierleague", (req, res) => __awaiter(void 0, void 0, void 0, functi
     try {
         const response = yield axios_1.default.get("https://api.football-data.org/v4/competitions/PL/standings", {
             headers: {
-                "X-Auth-Token": process.env.API_TOKEN,
+                "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
             },
         });
         res.send(response.data);
