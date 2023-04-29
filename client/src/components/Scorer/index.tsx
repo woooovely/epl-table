@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./style";
-import { teamNameMap } from '../Ranking';
+import { teamNameMap } from '../../constants/constants';
+import { playerNameMap } from '../../constants/constants';
 
 interface Scorer {
   player: {
@@ -23,18 +24,6 @@ interface Scorer {
   goals: number;
 }
 
-const playerNameMap: { [key: string]: string } = {
-    "Erling Haaland": "엘링 홀란드",
-    "Harry Kane": "해리 케인",
-    "Ivan Toney": "아이반 토니",
-    "Marcus Rashford": "마커스 래시포드",
-    "Martinelli": "가브리엘 마르치넬리",
-    "Mohamed Salah": "모하메드 살라",
-    "Ollie Watkins": "올리 왓킨스",
-    "Bukayo Saka": "부카요 사카",
-    "Aleksandar Mitrović": "알렉산다르 미트로비치",
-    "Rodrigo": "로드리고"
-}
 
 const ScorerTable = () => {
   const [scorers, setScorers] = useState<Scorer[]>([]);
