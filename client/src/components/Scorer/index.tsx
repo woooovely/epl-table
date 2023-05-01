@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./style";
-import { teamNameMap } from '../../constants/constants';
-import { playerNameMap } from '../../constants/constants';
+import { teamNameMap } from "../../constants/constants";
+import { playerNameMap } from "../../constants/constants";
 
 interface Scorer {
   player: {
@@ -23,7 +23,6 @@ interface Scorer {
   };
   goals: number;
 }
-
 
 const ScorerTable = () => {
   const [scorers, setScorers] = useState<Scorer[]>([]);
@@ -50,35 +49,31 @@ const ScorerTable = () => {
   }
 
   return (
-    <div>
-      <S.Table cellPadding={0} cellSpacing={0}>
-        <S.Head>
-          <S.TableTr>
-            <S.TableTh>순위</S.TableTh>
-            <S.TableTh>선수명</S.TableTh>
-            <S.TableTh>소속팀</S.TableTh>
-            <S.TableTh>득점 수</S.TableTh>
-          </S.TableTr>
-        </S.Head>
-        <S.Body>
-          {scorers.map((scorer: Scorer, index: number) => (
-            <S.ListTr key={scorer.player.id}>
-              <S.ListTd>{index + 1}</S.ListTd>
-              <S.ListTd>{playerNameMap[scorer.player.name]}</S.ListTd>
-              <S.ListTd>
-                <div>
-                  <S.TeamLogo src={scorer.team.crest} alt="팀 로고" />
-                </div>
-                <div>
-                  <S.TeamName>{teamNameMap[scorer.team.name]}</S.TeamName>
-                </div>
-              </S.ListTd>
-              <S.ListTd>{scorer.goals}</S.ListTd>
-            </S.ListTr>
-          ))}
-        </S.Body>
-      </S.Table>
-    </div>
+    <S.Table>
+      <S.Head>
+        <S.Tr>
+          <S.ColumnTitle>순위</S.ColumnTitle>
+          <S.ColumnTitle>선수명</S.ColumnTitle>
+          <S.ColumnTitle>득점</S.ColumnTitle>
+          <S.ColumnTitle>소속팀</S.ColumnTitle>
+          <S.ColumnTitle>국적</S.ColumnTitle>
+        </S.Tr>
+      </S.Head>
+      <S.Body>
+        {scorers.map((item: Scorer, index: number) => (
+          <S.Tr key={item.player.id}>
+            <S.Td>{index + 1}</S.Td>
+            <S.Td>{playerNameMap[item.player.name]}</S.Td>
+            <S.Td>{item.goals}</S.Td>
+            <S.Td>
+              <S.TeamLogo src={item.team.crest} alt="팀" />
+              <S.TeamName>{teamNameMap[item.team.name]}</S.TeamName>
+            </S.Td>
+            <S.Td>{item.player.nationality}</S.Td>
+          </S.Tr>
+        ))}
+      </S.Body>
+    </S.Table>
   );
 };
 
