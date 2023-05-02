@@ -34,4 +34,11 @@ export const playerNameMap: { [key: string]: string } = {
     "Rodrigo": "로드리고",
     "Callum Wilson": "칼럼 윌슨",
     "Martin Ødegaard": "마르틴 외데고르"
+};
+
+export const nationMap: { [key: string]: string } = {
+    "Norway": "노르웨이",
+    "England": "잉글랜드",
+    "Egypt": "이집트",
+    "Brazil": "브라질"
 }
