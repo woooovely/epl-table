@@ -31,6 +31,9 @@ export const Td = styled.td`
     width: 150px;
     font-weight: 620;
   }
+  :last-of-type {
+    width: 100px;
+  }
 `;
 
 export const TeamLogo = styled.img`
