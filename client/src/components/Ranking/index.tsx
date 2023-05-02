@@ -22,6 +22,7 @@ interface Team {
   draw: number;
   lost: number;
   points: number;
+  goalDifference: number;
 }
 
 
