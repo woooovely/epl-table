@@ -12,12 +12,12 @@ export const teamNameMap: { [key: string]: string } = {
   "Chelsea FC": "첼시",
   "Crystal Palace FC": "크리스탈 팰리스",
   "Wolverhampton Wanderers FC": "울버햄튼 원더러스",
-  "West Ham United FC": "웨스트햄",
+  "West Ham United FC": "웨스트햄 유나이티드",
   "AFC Bournemouth": "본머스",
-  "Leeds United FC": "리즈",
+  "Leeds United FC": "리즈 유나이티드",
   "Everton FC": "에버튼",
-  "Nottingham Forest FC": "노팅엄",
-  "Leicester City FC": "레스터",
+  "Nottingham Forest FC": "노팅엄 포레스트",
+  "Leicester City FC": "레스터 시티",
   "Southampton FC": "사우스햄튼",
 };
 
