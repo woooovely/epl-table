@@ -43,8 +43,6 @@ const NewsLists = () => {
           <S.Thumbnail>
             <a
               href={item.originalLink}
-              target="_blank"
-              rel="noopener noreferrer"
             >
                 <S.Image src={thumbnail} alt="썸네일" />
             </a>
