@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import * as S from "./style";
 import { teamNameMap } from "../../constants/constants";
 import { playerNameMap } from "../../constants/constants";
+import { nationMap } from '../../constants/constants';
 
 interface Scorer {
   player: {
@@ -69,7 +70,7 @@ const ScorerTable = () => {
               <S.TeamLogo src={item.team.crest} alt="팀" />
               <S.TeamName>{teamNameMap[item.team.name]}</S.TeamName>
             </S.Td>
-            <S.Td>{item.player.nationality}</S.Td>
+            <S.Td>{nationMap[item.player.nationality]}</S.Td>
           </S.Tr>
         ))}
       </S.Body>
