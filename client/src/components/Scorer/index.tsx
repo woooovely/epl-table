@@ -21,6 +21,7 @@ interface Scorer {
     id: number;
     name: string;
     crest: string;
+    website: string
   };
   goals: number;
 }
@@ -68,7 +69,11 @@ const ScorerTable = () => {
             <S.Td>{item.goals}</S.Td>
             <S.Td>
               <S.TeamLogo src={item.team.crest} alt="팀" />
-              <S.TeamName>{teamNameMap[item.team.name]}</S.TeamName>
+              <S.TeamName>
+                <S.TeamLink href={item.team.website}>
+                  {teamNameMap[item.team.name]}
+                </S.TeamLink>
+              </S.TeamName>
             </S.Td>
             <S.Td>{nationMap[item.player.nationality]}</S.Td>
           </S.Tr>
