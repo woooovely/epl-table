@@ -46,3 +46,11 @@ export const TeamName = styled.span`
   padding-left: 10px;
   width: 130px;
 `
+
+export const TeamLink = styled.a`
+  color: black;
+  text-decoration: none;
+  &:hover {
+    font-weight: 600;
+  }
+`
