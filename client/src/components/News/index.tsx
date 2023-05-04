@@ -22,7 +22,14 @@ const NewsLists = () => {
         
         if (response.status === 200) {
             const { items } = response.data
-            setNews(items)
+            
+            const parser = new DOMParser();
+            const parsedItems = items.map((item: News) => ({
+              ...item,
+              title: parser.parseFromString(item.title, 'text/html').body.textContent
+            }))
+
+            setNews(parsedItems)
         }
         setIsLoading(false);
     }
