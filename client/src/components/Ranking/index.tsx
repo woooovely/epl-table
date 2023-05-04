@@ -75,6 +75,7 @@ const RankingLists = () => {
             <S.TableTh>승</S.TableTh>
             <S.TableTh>무</S.TableTh>
             <S.TableTh>패</S.TableTh>
+            <S.TableTh>득실차</S.TableTh>
             <S.TableTh>승점</S.TableTh>
           </S.TableTr>
         </S.Head>
@@ -92,6 +93,7 @@ const RankingLists = () => {
               <S.ListTd>{item.won}</S.ListTd>
               <S.ListTd>{item.draw}</S.ListTd>
               <S.ListTd>{item.lost}</S.ListTd>
+              <S.ListTd>{item.goalDifference}</S.ListTd>
               <S.ListTd>{item.points}</S.ListTd>
             </S.ListTr>
           ))}
