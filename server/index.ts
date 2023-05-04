@@ -62,7 +62,7 @@ app.get('/news', async (req: Request, res: Response) => {
   }
 })
 
-const PORT = 4000;
+const PORT = 4001;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
