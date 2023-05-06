@@ -17,7 +17,7 @@ app.get("/premierleague/scorers", async (req: Request, res: Response) => {
       "https://api.football-data.org/v4/competitions/PL/scorers",
       {
         headers: {
-          "X-Auth-Token": process.env.API_TOKEN,
+          "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
         },
       }
     );
@@ -34,7 +34,7 @@ app.get("/premierleague", async (req: Request, res: Response) => {
       "https://api.football-data.org/v4/competitions/PL/standings",
       {
         headers: {
-          "X-Auth-Token": process.env.API_TOKEN,
+          "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
         },
       }
     );
@@ -50,8 +50,8 @@ app.get('/news', async (req: Request, res: Response) => {
     const response = await axios.get('https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230101&endDate=20230421', 
     {
       headers: {
-        'X-Naver-Client-Id': process.env.CLIENT_ID,
-        'X-Naver-Client-Secret': process.env.CLIENT_SECRET
+        'X-Naver-Client-Id': "cAF0lQLJicO9hFcO8ZaG",
+        'X-Naver-Client-Secret': "nQ6CSn959Z"
       }
     }
     )
@@ -62,7 +62,7 @@ app.get('/news', async (req: Request, res: Response) => {
   }
 })
 
-const PORT = 4001;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
