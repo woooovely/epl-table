@@ -32,9 +32,9 @@ const NewsLists = () => {
             .body.textContent,
         }));
 
+        setIsLoading(false);
         setNews(parsedItems);
       }
-      setIsLoading(false);
     };
     fetchData();
   }, []);
