@@ -5,7 +5,7 @@ import thumbnail from '../../assets/svgs/thumbnail.svg'
 
 interface News {
   title: string;
-  originalLink: string;
+  originallink: string;
   link: string;
   description: string;
   pubDate: string;
@@ -49,7 +49,7 @@ const NewsLists = () => {
         {news?.map((item: News) => (
           <S.Thumbnail>
             <a
-              href={item.originalLink}
+              href={item.originallink}
             >
                 <S.Image src={thumbnail} alt="썸네일" />
             </a>
