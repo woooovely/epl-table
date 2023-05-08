@@ -30,7 +30,10 @@ export const Image = styled.img`
 
 export const NewsTitle = styled.p`
   font-weight: 600;
+  font-size: 20px;
+  padding-right: 10px;
 `
 
 export const Detail = styled.div`
+  padding-bottom: 10px;
 `
