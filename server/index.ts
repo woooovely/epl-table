@@ -47,7 +47,7 @@ app.get("/premierleague", async (req: Request, res: Response) => {
 
 app.get('/news', async (req: Request, res: Response) => {
   try {
-    const response = await axios.get('https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230101&endDate=20230421', 
+    const response = await axios.get('https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230101&endDate=20230508', 
     {
       headers: {
         'X-Naver-Client-Id': "cAF0lQLJicO9hFcO8ZaG",
