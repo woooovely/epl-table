@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as S from "./style";
 import axios from "axios";
-import thumbnail from '../../assets/svgs/thumbnail.svg'
+import thumbnail from "../../assets/svgs/thumbnail.svg";
 
 interface News {
   title: string;
@@ -17,22 +17,23 @@ const NewsLists = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        const url = '/news';
-        const response = await axios.get(url);
-        
-        if (response.status === 200) {
-            const { items } = response.data
-            
-            const parser = new DOMParser();
-            const parsedItems = items.map((item: News) => ({
-              ...item,
-              title: parser.parseFromString(item.title, 'text/html').body.textContent
-            }))
+      const url = "/news";
+      const response = await axios.get(url);
 
-            setNews(parsedItems)
-        }
-        setIsLoading(false);
-    }
+      if (response.status === 200) {
+        const { items } = response.data;
+
+        const parser = new DOMParser();
+        const parsedItems = items.map((item: News) => ({
+          ...item,
+          title: parser.parseFromString(item.title, "text/html").body
+            .textContent,
+        }));
+
+        setNews(parsedItems);
+      }
+      setIsLoading(false);
+    };
     fetchData();
   }, []);
 
@@ -48,12 +49,13 @@ const NewsLists = () => {
       <S.NewsItemBlock>
         {news?.map((item: News) => (
           <S.Thumbnail>
-            <a
-              href={item.originallink}
-            >
-                <S.Image src={thumbnail} alt="썸네일" />
+            <a href={item.originallink}>
+              <S.Image src={thumbnail} alt="썸네일" />
             </a>
-            {item.title}
+            <S.Detail>
+              <S.NewsTitle>{item.title}</S.NewsTitle>
+              {item.description}
+            </S.Detail>
           </S.Thumbnail>
         ))}
       </S.NewsItemBlock>
