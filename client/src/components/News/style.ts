@@ -37,3 +37,8 @@ export const NewsTitle = styled.p`
 export const Detail = styled.div`
   padding-bottom: 10px;
 `
+
+export const NewsLink = styled.a`
+  text-decoration: none;
+  color: black;
+`
