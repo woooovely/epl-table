@@ -28,6 +28,8 @@ const NewsLists = () => {
           ...item,
           title: parser.parseFromString(item.title, "text/html").body
             .textContent,
+          description: parser.parseFromString(item.description, "text/html")
+            .body.textContent,
         }));
 
         setNews(parsedItems);
@@ -48,15 +50,15 @@ const NewsLists = () => {
       <S.Title>인기 급상승 뉴스</S.Title>
       <S.NewsItemBlock>
         {news?.map((item: News) => (
-          <S.Thumbnail>
-            <a href={item.originallink}>
+          <S.NewsLink href={item.originallink}>
+            <S.Thumbnail>
               <S.Image src={thumbnail} alt="썸네일" />
-            </a>
-            <S.Detail>
-              <S.NewsTitle>{item.title}</S.NewsTitle>
-              {item.description}
-            </S.Detail>
-          </S.Thumbnail>
+              <S.Detail>
+                <S.NewsTitle>{item.title}</S.NewsTitle>
+                {item.description}
+              </S.Detail>
+            </S.Thumbnail>
+          </S.NewsLink>
         ))}
       </S.NewsItemBlock>
     </div>
