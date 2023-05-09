@@ -5,7 +5,7 @@ export const BannerImage = styled.img`
 `
 
 export const Text = styled.p`
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 600;
   color: #21109E;
   text-align: center;
