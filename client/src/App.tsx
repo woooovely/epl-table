@@ -2,16 +2,18 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Introduce from "./pages/introduce";
-import TeamRank from "./pages/rank";
-import Scorer from './pages/scorer';
-import News from './pages/news';
+import PremierRank from "./pages/rank/premier";
+import Scorer from "./pages/scorer/premier";
+import News from './pages/news/premier/index'
+import LaligaRank from './pages/rank/laliga';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Introduce />}></Route>
-        <Route path="/rank" element={<TeamRank />}></Route>
+        <Route path="/pl/rank" element={<PremierRank />}></Route>
+        <Route path="/laliga/rank" element={<LaligaRank />}></Route>
         <Route path="/top-scorer" element={<Scorer />}></Route>
         <Route path="/news" element={<News />}></Route>
       </Routes>
