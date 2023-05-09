@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as S from "./style";
 import axios from "axios";
-import thumbnail from "../../assets/svgs/thumbnail.svg";
+import thumbnail from '../../../assets/svgs/thumbnail.svg';
 
 interface News {
   title: string;

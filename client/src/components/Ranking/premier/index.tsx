@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import useTitle from "../../hook/title";
+import useTitle from "../../../hook/title";
 import * as S from "./style";
-import { teamNameMap } from '../../constants/constants';
+import { teamNameMap } from "../../../constants/constants";
 
 interface TeamData {
   id: number;
@@ -24,7 +24,6 @@ interface Team {
   points: number;
   goalDifference: number;
 }
-
 
 const RankingLists = () => {
   const titleUpdater = useTitle("불러오는 중...");

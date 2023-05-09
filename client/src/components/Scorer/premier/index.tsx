@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./style";
-import { teamNameMap } from "../../constants/constants";
-import { playerNameMap } from "../../constants/constants";
-import { nationMap } from '../../constants/constants';
+import { teamNameMap } from '../../../constants/constants'
+import { playerNameMap } from '../../../constants/constants'
+import { nationMap } from '../../../constants/constants'
 
 interface Scorer {
   player: {
