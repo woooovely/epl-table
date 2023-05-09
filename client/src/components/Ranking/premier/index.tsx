@@ -34,7 +34,7 @@ const RankingLists = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = "/premierleague";
+      const url = "/premierleague/rank";
       const response = await axios.get(url);
 
       if (response.status === 200) {

@@ -17,7 +17,7 @@ const NewsLists = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = "/news";
+      const url = "/premierleague/news";
       const response = await axios.get(url);
 
       if (response.status === 200) {

@@ -27,7 +27,7 @@ app.get("/premierleague/scorers", async (req: Request, res: Response) => {
   }
 });
 
-app.get("/premierleague", async (req: Request, res: Response) => {
+app.get("/premierleague/rank", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
       "https://api.football-data.org/v4/competitions/PL/standings",
@@ -44,7 +44,7 @@ app.get("/premierleague", async (req: Request, res: Response) => {
   }
 });
 
-app.get("/news", async (req: Request, res: Response) => {
+app.get("/premierleague/news", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
       "https://openapi.naver.com/v1/search/news.json?query=%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%EB%A6%AC%EA%B7%B8&display=10&start=1&sort=sim&startDate=20230101&endDate=20230508",
@@ -61,6 +61,7 @@ app.get("/news", async (req: Request, res: Response) => {
     res.status(500).send("Interval Server Error");
   }
 });
+
 
 const PORT = 4000;
 app.listen(PORT, () => {
