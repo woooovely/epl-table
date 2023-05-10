@@ -65,7 +65,7 @@ app.get("/premierleague/news", async (req: Request, res: Response) => {
 app.get("/laliga/rank", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
-      "https://api.football-data.org/v4/competitions/LA_LIGA/standings",
+      "https://api.football-data.org/v2/competitions/PD/standings",
       {
         headers: {
           "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
