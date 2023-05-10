@@ -42,3 +42,26 @@ export const plNationMap: { [key: string]: string } = {
     "Egypt": "이집트",
     "Brazil": "브라질"
 }
+
+export const laligaTeamNameMap: { [key: string]: string } = {
+  "FC Barcelona": "FC 바르셀로나",
+  "Club Atlético de Madrid": "아틀레티코 마드리드",
+  "Real Madrid CF": "레알 마드리드",
+  "Real Sociedad de Fútbol": "레알 소시에다드",
+  "Villarreal CF": "비야레알",
+  "Real Betis Balompié": "레알 베티스",
+  "Girona FC": "지로나",
+  "Athletic Club": "아틀레틱 빌바오",
+  "Rayo Vallecano de Madrid": "라요 바예카노",
+  "CA Osasuna": "오사수나",
+  "Sevilla FC": "세비야",
+  "RCD Mallorca": "마요르카",
+  "RC Celta de Vigo": "셀타비고",
+  "UD Almería": "알메리아",
+  "Cádiz CF": "카디스 CF",
+  "Real Valladolid CF": "레알 바야돌리드",
+  "Valencia CF": "발렌시아",
+  "Getafe CF": "헤타페",
+  "RCD Espanyol de Barcelona": "RCD 에스파뇰",
+  "Elche CF": "엘체"
+}
