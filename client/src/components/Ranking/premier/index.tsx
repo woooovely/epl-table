@@ -25,7 +25,7 @@ interface Team {
   goalDifference: number;
 }
 
-const RankingLists = () => {
+const PLRankLists = () => {
   const titleUpdater = useTitle("불러오는 중...");
   setTimeout(() => titleUpdater("팀 순위 - EPL Table"));
 
@@ -102,4 +102,4 @@ const RankingLists = () => {
   );
 };
 
-export default RankingLists;
+export default PLRankLists;

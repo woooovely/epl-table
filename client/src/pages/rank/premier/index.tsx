@@ -1,7 +1,7 @@
 import * as S from "./style";
 import banner from '../../../assets/svgs/banner.svg'
 import Header from "../../../components/Header";
-import RankingLists from "../../../components/Ranking/premier";
+import PLRankLists from "../../../components/Ranking/premier";
 import SubHeader from '../../../components/SubHeader';
 
 const PremierRank = () => {
@@ -13,7 +13,7 @@ const PremierRank = () => {
       <S.Text>잉글랜드 프리미어리그</S.Text>
       <S.Stick />
       <S.TableContainer>
-        <RankingLists />
+        <PLRankLists />
       </S.TableContainer>
     </div>
   );
