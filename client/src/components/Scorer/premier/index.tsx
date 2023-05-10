@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./style";
-import { teamNameMap } from '../../../constants/constants'
+import { plTeamNameMap } from '../../../constants/constants'
 import { playerNameMap } from '../../../constants/constants'
 import { nationMap } from '../../../constants/constants'
 
@@ -71,7 +71,7 @@ const ScorerTable = () => {
               <S.TeamLogo src={item.team.crest} alt="팀" />
               <S.TeamName>
                 <S.TeamLink href={item.team.website}>
-                  {teamNameMap[item.team.name]}
+                  {plTeamNameMap[item.team.name]}
                 </S.TeamLink>
               </S.TeamName>
             </S.Td>

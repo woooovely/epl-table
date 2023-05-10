@@ -1,4 +1,4 @@
-export const teamNameMap: { [key: string]: string } = {
+export const plTeamNameMap: { [key: string]: string } = {
   "Arsenal FC": "아스날",
   "Manchester City FC": "맨체스터 시티",
   "Newcastle United FC": "뉴캐슬 유나이티드",
