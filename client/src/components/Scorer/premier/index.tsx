@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import * as S from "./style";
 import { plTeamNameMap } from '../../../constants/constants'
-import { playerNameMap } from '../../../constants/constants'
-import { nationMap } from '../../../constants/constants'
+import { plPlayerNameMap } from '../../../constants/constants'
+import { plNationMap } from '../../../constants/constants'
 
 interface Scorer {
   player: {
@@ -65,7 +65,7 @@ const ScorerTable = () => {
         {scorers.map((item: Scorer, index: number) => (
           <S.Tr key={item.player.id}>
             <S.Td>{index + 1}</S.Td>
-            <S.Td>{playerNameMap[item.player.name]}</S.Td>
+            <S.Td>{plPlayerNameMap[item.player.name]}</S.Td>
             <S.Td>{item.goals}</S.Td>
             <S.Td>
               <S.TeamLogo src={item.team.crest} alt="팀" />
@@ -75,7 +75,7 @@ const ScorerTable = () => {
                 </S.TeamLink>
               </S.TeamName>
             </S.Td>
-            <S.Td>{nationMap[item.player.nationality]}</S.Td>
+            <S.Td>{plNationMap[item.player.nationality]}</S.Td>
           </S.Tr>
         ))}
       </S.Body>

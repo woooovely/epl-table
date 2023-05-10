@@ -21,7 +21,7 @@ export const plTeamNameMap: { [key: string]: string } = {
   "Southampton FC": "사우스햄튼",
 };
 
-export const playerNameMap: { [key: string]: string } = {
+export const plPlayerNameMap: { [key: string]: string } = {
     "Erling Haaland": "엘링 홀란드",
     "Harry Kane": "해리 케인",
     "Ivan Toney": "아이반 토니",
@@ -36,7 +36,7 @@ export const playerNameMap: { [key: string]: string } = {
     "Martin Ødegaard": "마르틴 외데고르"
 };
 
-export const nationMap: { [key: string]: string } = {
+export const plNationMap: { [key: string]: string } = {
     "Norway": "노르웨이",
     "England": "잉글랜드",
     "Egypt": "이집트",
