@@ -10,6 +10,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// 프리미어리그 득점왕 프록시 서버
 app.get("/premierleague/scorers", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
@@ -27,6 +28,7 @@ app.get("/premierleague/scorers", async (req: Request, res: Response) => {
   }
 });
 
+// 프리미어리그 팀 순위 프록시 서버
 app.get("/premierleague/rank", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
@@ -44,6 +46,7 @@ app.get("/premierleague/rank", async (req: Request, res: Response) => {
   }
 });
 
+// 프리미어리그 관련 뉴스 프록시 서버
 app.get("/premierleague/news", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
@@ -62,6 +65,7 @@ app.get("/premierleague/news", async (req: Request, res: Response) => {
   }
 });
 
+// 라리가 팀 순위 프록시 서버
 app.get("/laliga/rank", async (req: Request, res: Response) => {
   try {
     const response = await axios.get(
@@ -76,6 +80,24 @@ app.get("/laliga/rank", async (req: Request, res: Response) => {
   } catch (error) {
     console.error(error);
     res.status(500).send("Interval Server Error");
+  }
+});
+
+// 세리에A 팀 순위 프록시 서버
+app.get("/serie/rank", async (req: Request, res: Response) => {
+  try {
+    const response = await axios.get(
+      "https://api.football-data.org/v4/competitions/SA/standings",
+      {
+        headers: {
+          "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
+        },
+      }
+    );
+    res.send(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
