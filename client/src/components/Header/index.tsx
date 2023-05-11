@@ -10,7 +10,7 @@ const Header = () => {
                   <S.LinkStyle to="/">홈</S.LinkStyle>
                 </S.Categories>
                 <S.Categories>
-                  <S.LinkStyle to="/rank">팀 순위</S.LinkStyle>
+                  <S.LinkStyle to="/pl/rank">팀 순위</S.LinkStyle>
                 </S.Categories>
                 <S.Categories>
                   <S.LinkStyle to="/top-scorer">득점왕 순위</S.LinkStyle>
