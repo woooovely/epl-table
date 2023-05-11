@@ -65,3 +65,27 @@ export const laligaTeamNameMap: { [key: string]: string } = {
   "RCD Espanyol de Barcelona": "RCD 에스파뇰",
   "Elche CF": "엘체"
 }
+
+export const serieTeamNameMap: { [key: string]: string } = {
+  "SSC Napoli": "나폴리",
+  "Juventus FC": "유벤투스",
+  "SS Lazio": "라치오",
+  "FC Internazionale Milano": "인터 밀란",
+  "AC Milan": "AC 밀란",
+  "Atalanta BC": "아탈란타",
+  "AS Roma": "AS 로마",
+  "ACF Fiorentina": "피오렌티나",
+  "Udinese Calcio": "우디세네",
+  "Bologna FC 1909": "볼로냐",
+  "Torino FC": "토리노",
+  "AC Monza": "AC 몬차",
+  "US Sassuolo Calcio": "사수올로",
+  "Empoli FC": "엠폴리",
+  "US Salernitana 1919": "살레르니타나",
+  "US Lecce": "레체",
+  "Hellas Verona FC": "엘라스 베로나",
+  "Spezia Calcio": "스페치아 칼초",
+  "US Cremonese": "크레모네세",
+  "UC Sampdoria": "삼프도리아",
+  
+}
