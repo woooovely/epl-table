@@ -2,9 +2,12 @@ import * as S from './style';
 
 interface HeaderProps {
     title: string
+    premier: string
+    laliga: string
+    serie: string
 }
 
-const SubHeader = ({ title }: HeaderProps) => {
+const SubHeader = ({ title, premier, laliga, serie }: HeaderProps) => {
     return (
         <>
           <S.HeaderContainer>
@@ -13,13 +16,13 @@ const SubHeader = ({ title }: HeaderProps) => {
             </S.TextContainer>
             <S.MenuContainer>
                 <S.Menu>
-                    <S.LinkStyle to="/pl/rank">프리미어리그</S.LinkStyle>
+                    <S.LinkStyle to={premier}>프리미어리그</S.LinkStyle>
                 </S.Menu>
                 <S.Menu>
-                    <S.LinkStyle to="/laliga/rank">라리가</S.LinkStyle>
+                    <S.LinkStyle to={laliga}>라리가</S.LinkStyle>
                 </S.Menu>
                 <S.Menu>
-                    <S.LinkStyle to="/serie/rank">세리에A</S.LinkStyle>
+                    <S.LinkStyle to={serie}>세리에A</S.LinkStyle>
                 </S.Menu>
             </S.MenuContainer>
           </S.HeaderContainer>
