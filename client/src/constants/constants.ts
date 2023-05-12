@@ -36,11 +36,17 @@ export const plPlayerNameMap: { [key: string]: string } = {
     "Martin Ødegaard": "마르틴 외데고르"
 };
 
-export const plNationMap: { [key: string]: string } = {
+export const nationMap: { [key: string]: string } = {
     "Norway": "노르웨이",
     "England": "잉글랜드",
     "Egypt": "이집트",
-    "Brazil": "브라질"
+    "Brazil": "브라질",
+    "Poland": "폴란드",
+    "France": "프랑스",
+    "Spain": "스페인",
+    "Turkey": "튀르키예",
+    "Kosovo": "코소보",
+    "Argentina": "아르헨티나",
 }
 
 export const laligaTeamNameMap: { [key: string]: string } = {
@@ -87,5 +93,18 @@ export const serieTeamNameMap: { [key: string]: string } = {
   "Spezia Calcio": "스페치아 칼초",
   "US Cremonese": "크레모네세",
   "UC Sampdoria": "삼프도리아",
-  
+
+}
+
+export const laligaPlayerNameMap: { [key: string]: string } = {
+  "Robert Lewandowski": "로베르트 레반도프스키",
+  "Karim Benzema": "카림 벤제마",
+  "Joselu": "호셀루",
+  "Enes Ünal": "에네스 위날",
+  "Álvaro Morata": "알바로 모라타",
+  "Antoine Griezmann": "앙투안 그리즈만",
+  "Vedat Muriqi": "베다트 무리키",
+  "Valentín Castellanos": "발렌틴 카스테야노스",
+  "Iago Aspas": "이아고 아스파스",
+  "Borja Iglesias": "보르하 이글레시아스",
 }
