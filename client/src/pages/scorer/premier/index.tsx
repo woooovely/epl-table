@@ -4,7 +4,7 @@ import banner from "../../../assets/svgs/banner.svg";
 import ScorerTable from "../../../components/Scorer/premier/index";
 import SubHeader from "../../../components/SubHeader";
 
-const Scorer = () => {
+const PremierScorer = () => {
   return (
     <div>
       <Header />
@@ -24,4 +24,4 @@ const Scorer = () => {
   );
 };
 
-export default Scorer;
+export default PremierScorer;
