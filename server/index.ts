@@ -101,6 +101,23 @@ app.get("/serie/rank", async (req: Request, res: Response) => {
   }
 });
 
+// 라리가 득점왕 순위 프록시 서버
+app.get('/laliga/scorer', async (req: Request, res: Response) => {
+  try {
+    const response = await axios.get('https://api.football-data.org/v4/competitions/PD/scorers', 
+    {
+      headers: {
+        "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077"
+      }
+    }
+    )
+    res.send(response.data);
+  } catch (error) {
+    console.error(error)
+    res.status(500).send("Internal Server Error")
+  }
+})
+
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
