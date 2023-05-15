@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import Introduce from "./pages/introduce";
 import PremierRank from "./pages/rank/premier";
 import PremierScorer from "./pages/scorer/premier";
-import News from './pages/news/premier/index'
+import PremierNews from './pages/news/premier/index'
 import LaligaRank from './pages/rank/laliga';
 import SerieRank from './pages/rank/serie';
 import LaligaScorer from './pages/scorer/laliga';
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Route path="/pl/scorer" element={<PremierScorer />}></Route>
         <Route path="/laliga/scorer" element={<LaligaScorer />}></Route>
         <Route path="/serie/scorer" element={<SerieScorer />}></Route>
-        <Route path="/news" element={<News />}></Route>
+        <Route path="/pl/news" element={<PremierNews />}></Route>
       </Routes>
     </BrowserRouter>
   );
