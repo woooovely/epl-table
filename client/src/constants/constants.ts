@@ -47,6 +47,13 @@ export const nationMap: { [key: string]: string } = {
     "Turkey": "튀르키예",
     "Kosovo": "코소보",
     "Argentina": "아르헨티나",
+    "Nigeria": "나이지리아",
+    "Senegal": "세네갈",
+    "Angola": "앙골라",
+    "Georgia": "조지아",
+    "Portugal": "포르투갈",
+    "Paraguay": "파라과이",
+    "Italy": "이탈리아",
 }
 
 export const laligaTeamNameMap: { [key: string]: string } = {
@@ -107,4 +114,17 @@ export const laligaPlayerNameMap: { [key: string]: string } = {
   "Valentín Castellanos": "발렌틴 카스테야노스",
   "Iago Aspas": "이아고 아스파스",
   "Borja Iglesias": "보르하 이글레시아스",
+}
+
+export const seriePlayerNameMap: { [key: string]: string } = {
+  "Victor Osimhen": "빅터 오시멘",
+  "Lautaro Martínez": "라우타로 마르티네스",
+  "Boulaye Dia": "불라이 디아",
+  "Ademola Lookman": "아데몰라 루크먼",
+  "M'Bala Nzola": "음발라 은졸라",
+  "Khvicha Kvaratskhelia": "흐비차 크바라츠헬리아",
+  "Rafael Leão": "하파엘 레앙",
+  "Antonio Sanabria": "안토니오 사나브리아",
+  "Ciro Immobile": "치로 임모빌레",
+  "Paulo Dybala": "파울로 디발라"
 }
