@@ -102,21 +102,40 @@ app.get("/serie/rank", async (req: Request, res: Response) => {
 });
 
 // 라리가 득점왕 순위 프록시 서버
-app.get('/laliga/scorer', async (req: Request, res: Response) => {
+app.get("/laliga/scorer", async (req: Request, res: Response) => {
   try {
-    const response = await axios.get('https://api.football-data.org/v4/competitions/PD/scorers', 
-    {
-      headers: {
-        "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077"
+    const response = await axios.get(
+      "https://api.football-data.org/v4/competitions/PD/scorers",
+      {
+        headers: {
+          "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
+        },
       }
-    }
-    )
+    );
     res.send(response.data);
   } catch (error) {
-    console.error(error)
-    res.status(500).send("Internal Server Error")
+    console.error(error);
+    res.status(500).send("Internal Server Error");
   }
-})
+});
+
+// 세리에A 득점왕 순위 프록시 서버
+app.get("/serie/scorer", async (req: Request, res: Response) => {
+  try {
+    const response = await axios.get(
+      "https://api.football-data.org/v4/competitions/SA/scorers",
+      {
+        headers: {
+          "X-Auth-Token": "e626339ce3c945e68bc7e7691ac3b077",
+        },
+      }
+    );
+    res.send(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
+});
 
 const PORT = 4000;
 app.listen(PORT, () => {
