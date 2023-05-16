@@ -16,7 +16,7 @@ const Header = () => {
                   <S.LinkStyle to="/pl/scorer">득점왕 순위</S.LinkStyle>
                 </S.Categories>
                 <S.Categories>
-                  <S.LinkStyle to="/news">해외축구 소식</S.LinkStyle>
+                  <S.LinkStyle to="/pl/news">해외축구 소식</S.LinkStyle>
                 </S.Categories>
             </S.CategoryContainer>
           </S.HeaderContainer>
