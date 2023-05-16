@@ -137,6 +137,24 @@ app.get("/serie/scorer", async (req: Request, res: Response) => {
   }
 });
 
+app.get("/laliga/news", async (req: Request, res: Response) => {
+  try {
+    const response = await axios.get(
+      "https://openapi.naver.com/v1/search/news.json?query=라리가&display=10&start=1&sort=sim&startDate=20230101&endDate=20230508",
+      {
+        headers: {
+          "X-Naver-Client-Id": "cAF0lQLJicO9hFcO8ZaG",
+          "X-Naver-Client-Secret": "nQ6CSn959Z",
+        },
+      }
+    );
+    res.send(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
