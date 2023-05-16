@@ -7,9 +7,7 @@ import thumbnal from '../../../assets/svgs/laliga.svg';
 interface News {
   title: string;
   originallink: string;
-  link: string;
   description: string;
-  pubDate: string;
 }
 
 const LaligaNewsLists = () => {
