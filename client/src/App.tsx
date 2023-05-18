@@ -10,6 +10,7 @@ import SerieRank from './pages/rank/serie';
 import LaligaScorer from './pages/scorer/laliga';
 import SerieScorer from './pages/scorer/serie';
 import LaligaNews from './pages/news/laliga';
+import SerieNews from './pages/news/serie';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
         <Route path="/serie/scorer" element={<SerieScorer />}></Route>
         <Route path="/pl/news" element={<PremierNews />}></Route>
         <Route path="/laliga/news" element={<LaligaNews />}></Route>
+        <Route path="/serie/news" element={<SerieNews />}></Route>
       </Routes>
     </BrowserRouter>
   );
