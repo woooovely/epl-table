@@ -49,8 +49,8 @@ const NewsLists = () => {
     <div>
       <S.Title>인기 급상승 뉴스</S.Title>
       <S.NewsItemBlock>
-        {news?.map((item: News) => (
-          <S.NewsLink href={item.originallink}>
+        {news?.map((item: News, index: number) => (
+          <S.NewsLink href={item.originallink} key={index + 1}>
             <S.Thumbnail>
               <S.Image src={thumbnail} alt="썸네일" />
               <S.Detail>
