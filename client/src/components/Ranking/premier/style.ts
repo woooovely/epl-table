@@ -109,3 +109,7 @@ export const TeamName = styled.div`
   vertical-align: middle;
   font-weight: bold;
 `;
+
+export const LoadingText = styled.h3`
+  text-align: center;
+`
