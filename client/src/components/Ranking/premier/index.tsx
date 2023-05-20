@@ -58,7 +58,7 @@ const PLRankLists = () => {
   }, [teams]);
 
   if (isLoading) {
-    return <h2>로딩중...</h2>;
+    return <S.LoadingText>불러오는중...</S.LoadingText>
   }
 
   console.log(teams);
