@@ -9,7 +9,7 @@ const LaligaNews = () => {
     <S.Container>
       <Header />
       <SubHeader
-        title="해외축구 소식"
+        title="프리메라리가 소식"
         premier="/pl/news"
         laliga="/laliga/news"
         serie="/serie/news"
