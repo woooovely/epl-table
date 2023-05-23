@@ -1,56 +1,65 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Table = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 100px;
-  background-color: #f5f5f5;
-`;
 
-export const Head = styled.thead`
-`;
+export const TableTitle = styled.ul`
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 700px;
+`
 
-export const Tr = styled.tr`
-  background-color: white;
-`;
+export const Lists = styled.li`
+  list-style: none;
+  width: 200px;
+  display: flex;
+  color: #BDBDBD;
+  font-weight: 600;
+`
 
-export const ColumnTitle = styled.th`
-  color: #989898;
-  padding: 10px;
-`;
+export const BoxContainer = styled.div`
+  width: 780px;
+`
 
-export const Body = styled.tbody`
-`;
+export const Container = styled.div`
+`
 
-export const Td = styled.td`
+export const Table = styled.div`
+  height: 30px;
   border-bottom: 1px solid #f2f2f2;
-  padding: 10px;
-  :nth-child(4) {
-    display: flex;
-  }
-  :nth-child(2) {
-    width: 195px;
-    font-weight: 620;
-  }
-  :last-of-type {
-    width: 100px;
-  }
-`;
+  margin-bottom: 20px;
+  display: flex;
+  margin-left: 30px;
+`
+
+export const TeamContainer = styled.div`
+  width: 240px;
+  margin: 0;
+  display: flex;
+`
 
 export const TeamLogo = styled.img`
   width: 25px;
   height: 25px;
+  margin-right: 6px;
 `
 
-export const TeamName = styled.span`
+export const Rank = styled.span`
+  margin-right: 20px;
   padding-left: 10px;
-  width: 130px;
 `
 
-export const TeamLink = styled.a`
-  color: black;
-  text-decoration: none;
-  &:hover {
-    font-weight: 600;
-  }
+export const Player = styled.span`
+  padding-left: 50px;
+  margin-right: 20px;
+  width: 210px;
+  font-weight: 600;
+`
+
+export const Goals = styled.span`
+  margin-right: 60px;
+  font-weight: 650;
+`
+
+export const Nation = styled.span`
+  width: 180px;
 `

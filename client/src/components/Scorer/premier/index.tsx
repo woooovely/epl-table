@@ -51,35 +51,29 @@ const ScorerTable = () => {
   }
 
   return (
-    <S.Table>
-      <S.Head>
-        <S.Tr>
-          <S.ColumnTitle>순위</S.ColumnTitle>
-          <S.ColumnTitle>선수명</S.ColumnTitle>
-          <S.ColumnTitle>득점</S.ColumnTitle>
-          <S.ColumnTitle>소속팀</S.ColumnTitle>
-          <S.ColumnTitle>국적</S.ColumnTitle>
-        </S.Tr>
-      </S.Head>
-      <S.Body>
-        {scorers.map((item: Scorer, index: number) => (
-          <S.Tr key={item.player.id}>
-            <S.Td>{index + 1}</S.Td>
-            <S.Td>{plPlayerNameMap[item.player.name]}</S.Td>
-            <S.Td>{item.goals}</S.Td>
-            <S.Td>
-              <S.TeamLogo src={item.team.crest} alt="팀" />
-              <S.TeamName>
-                <S.TeamLink href={item.team.website}>
-                  {plTeamNameMap[item.team.name]}
-                </S.TeamLink>
-              </S.TeamName>
-            </S.Td>
-            <S.Td>{nationMap[item.player.nationality]}</S.Td>
-          </S.Tr>
-        ))}
-      </S.Body>
-    </S.Table>
+    <S.BoxContainer>
+      <S.TableTitle>
+        <S.Lists>순위</S.Lists>
+        <S.Lists>선수명</S.Lists>
+        <S.Lists>득점</S.Lists>
+        <S.Lists>소속팀</S.Lists>
+        <S.Lists>국적</S.Lists>
+      </S.TableTitle>
+      {scorers.map((item: Scorer, index: number) => (
+        <S.Container key={item.player.id}>
+          <S.Table>
+            <S.Rank>{index + 1}</S.Rank>
+            <S.Player>{plPlayerNameMap[item.player.name]}</S.Player>
+            <S.Goals>{item.goals}</S.Goals>
+            <S.TeamContainer>
+              <S.TeamLogo src={item.team.crest} alt="팀 로고" />
+              {plTeamNameMap[item.team.name]}
+            </S.TeamContainer>
+            <S.Nation>{nationMap[item.player.nationality]}</S.Nation>
+          </S.Table>
+        </S.Container>
+      ))}
+    </S.BoxContainer>
   );
 };
 
