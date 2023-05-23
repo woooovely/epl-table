@@ -54,6 +54,7 @@ export const nationMap: { [key: string]: string } = {
     "Portugal": "포르투갈",
     "Paraguay": "파라과이",
     "Italy": "이탈리아",
+    "Serbia": "세르비아"
 }
 
 export const laligaTeamNameMap: { [key: string]: string } = {
