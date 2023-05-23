@@ -126,5 +126,6 @@ export const seriePlayerNameMap: { [key: string]: string } = {
   "Rafael Leão": "하파엘 레앙",
   "Antonio Sanabria": "안토니오 사나브리아",
   "Ciro Immobile": "치로 임모빌레",
-  "Paulo Dybala": "파울로 디발라"
+  "Paulo Dybala": "파울로 디발라",
+  "Olivier Giroud": "올리비에 지루"
 }
