@@ -3,8 +3,12 @@ import SubHeader from "../../../components/SubHeader";
 import * as S from "./style";
 import banner from '../../../assets/svgs/serie_banner.svg'
 import SerieNewsLists from '../../../components/News/serie';
+import useTitle from '../../../hook/title';
 
 const SerieNews = () => {
+    const titleUpdater = useTitle('불러오는 중...')
+    setTimeout(() => titleUpdater('세리에A 뉴스 - EPL Table'))
+
   return (
     <S.Container>
       <Header />
