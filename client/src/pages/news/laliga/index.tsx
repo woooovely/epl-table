@@ -3,8 +3,12 @@ import SubHeader from "../../../components/SubHeader";
 import * as S from "./style";
 import banner from '../../../assets/svgs/laliga_banner.svg';
 import LaligaNewsLists from '../../../components/News/laliga';
+import useTitle from '../../../hook/title';
 
 const LaligaNews = () => {
+    const titleUpdater = useTitle('불러오는 중...')
+    setTimeout(() => titleUpdater('프리메라리가 뉴스 - EPL Table'))
+
   return (
     <S.Container>
       <Header />
