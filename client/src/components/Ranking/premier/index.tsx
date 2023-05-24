@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import useTitle from "../../../hook/title";
 import * as S from "./style";
 import { plTeamNameMap } from "../../../constants/constants";
 
@@ -26,9 +25,6 @@ interface Team {
 }
 
 const PLRankLists = () => {
-  const titleUpdater = useTitle("불러오는 중...");
-  setTimeout(() => titleUpdater("프리미어리그 팀 순위 - EPL Table"));
-
   const [teams, setTeams] = useState<Team[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
