@@ -3,8 +3,12 @@ import SubHeader from "../../../components/SubHeader";
 import * as S from "./style";
 import banner from '../../../assets/svgs/serie_banner.svg'
 import SerieRankLists from '../../../components/Ranking/serie';
+import useTitle from '../../../hook/title';
 
 const SerieRank = () => {
+  const titleUpdater = useTitle('불러오는 중...')
+  setTimeout(() => titleUpdater('세리에A 순위 - EPL Table'))
+
   return (
     <div>
       <Header />
