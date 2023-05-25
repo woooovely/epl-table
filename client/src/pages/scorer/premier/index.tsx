@@ -9,7 +9,7 @@ const PremierScorer = () => {
     <div>
       <Header />
       <SubHeader
-        title="득점왕 순위"
+        title="프리미어리그 득점왕 순위"
         premier="/pl/scorer"
         laliga="/laliga/scorer"
         serie="/serie/scorer"
