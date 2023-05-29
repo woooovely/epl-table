@@ -3,8 +3,12 @@ import SubHeader from "../../../components/SubHeader";
 import * as S from "./style";
 import banner from '../../../assets/svgs/serie_banner.svg';
 import SerieScorerLists from '../../../components/Scorer/serie';
+import useTitle from '../../../hook/title';
 
 const SerieScorer = () => {
+  const titleUpdater = useTitle('불러오는 중...')
+  setTimeout(() => titleUpdater('세리에A 득점왕 순위 - EPL Table'))
+
   return (
     <div>
       <Header />
