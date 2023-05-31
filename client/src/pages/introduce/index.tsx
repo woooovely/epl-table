@@ -17,11 +17,11 @@ const Introduce = () => {
         <S.Section>
           <S.TextContainer>
             <S.Text>
-              잉글랜드
+              유럽
               <br />
-              최고의 축구리그
+              최고의 축구리그에
               <br />
-              프리미어리그에 빠져보세요.
+              빠져들어보세요.
             </S.Text>
           </S.TextContainer>
           <S.Right>
