@@ -29,6 +29,7 @@ const Introduce = () => {
           </S.Right>
         </S.Section>
         <S.Button onClick={() => navigate("/pl/rank")}>이동하기</S.Button>
+        <br />
       </S.IntroduceContainer>
     </S.Container>
   );
