@@ -13,6 +13,7 @@ export const HeaderContainer = styled.nav`
 export const LogoText = styled.p`
   font-family: 'Premier League';
   font-size: 25px;
+  cursor: pointer;
 `
 
 export const CategoryContainer = styled.ul`
