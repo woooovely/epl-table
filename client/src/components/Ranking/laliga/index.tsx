@@ -60,39 +60,43 @@ const LaligaRankLists = () => {
   console.log(teams);
 
   return (
-    <S.Table>
-      <S.Head>
-        <S.TableTr>
-          <S.TableTh>순위</S.TableTh>
-          <S.TableTh>클럽</S.TableTh>
-          <S.TableTh>경기수</S.TableTh>
-          <S.TableTh>승</S.TableTh>
-          <S.TableTh>무</S.TableTh>
-          <S.TableTh>패</S.TableTh>
-          <S.TableTh>득실차</S.TableTh>
-          <S.TableTh>승점</S.TableTh>
-        </S.TableTr>
-      </S.Head>
-      <S.Body>
-        {teams.map((item: Team) => (
-          <S.ListTr key={item.team.id}>
-            <S.ListTd>
-              <S.Rank>{item.position}</S.Rank>
-            </S.ListTd>
-            <S.ListTd>
-              <S.TeamLogo src={item.team.crestUrl} alt="팀 이미지" />
-              <S.TeamName>{item.team.name}</S.TeamName>
-            </S.ListTd>
-            <S.ListTd>{item.playedGames}</S.ListTd>
-            <S.ListTd>{item.won}</S.ListTd>
-            <S.ListTd>{item.draw}</S.ListTd>
-            <S.ListTd>{item.lost}</S.ListTd>
-            <S.ListTd>{item.goalDifference}</S.ListTd>
-            <S.ListTd>{item.points}</S.ListTd>
-          </S.ListTr>
-        ))}
-      </S.Body>
-    </S.Table>
+    <div>
+      <S.Table>
+        <S.Head>
+          <S.TableTr>
+            <S.TableTh>순위</S.TableTh>
+            <S.TableTh>클럽</S.TableTh>
+            <S.TableTh>경기수</S.TableTh>
+            <S.TableTh>승</S.TableTh>
+            <S.TableTh>무</S.TableTh>
+            <S.TableTh>패</S.TableTh>
+            <S.TableTh>득실차</S.TableTh>
+            <S.TableTh>승점</S.TableTh>
+          </S.TableTr>
+        </S.Head>
+        <S.Body>
+          {teams.map((item: Team) => (
+            <S.ListTr key={item.team.id}>
+              <S.ListTd>
+                <S.Rank>{item.position}</S.Rank>
+              </S.ListTd>
+              <S.ListTd>
+                <S.TeamLogo src={item.team.crestUrl} alt="팀 이미지" />
+                <S.TeamName>{item.team.name}</S.TeamName>
+              </S.ListTd>
+              <S.ListTd>{item.playedGames}</S.ListTd>
+              <S.ListTd>{item.won}</S.ListTd>
+              <S.ListTd>{item.draw}</S.ListTd>
+              <S.ListTd>{item.lost}</S.ListTd>
+              <S.ListTd>{item.goalDifference}</S.ListTd>
+              <S.ListTd>{item.points}</S.ListTd>
+            </S.ListTr>
+          ))}
+        </S.Body>
+      </S.Table>
+      <br />
+      <br />
+    </div>
   );
 };
 

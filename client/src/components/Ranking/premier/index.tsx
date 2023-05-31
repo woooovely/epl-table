@@ -94,6 +94,8 @@ const PLRankLists = () => {
           ))}
         </S.Body>
       </S.Table>
+      <br />
+      <br />
     </div>
   );
 };
